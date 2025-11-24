@@ -1,0 +1,18 @@
+name: "podcast generator"
+author: "Ricardo Goncalves"
+description: "Generate podcast episodes from a YMAL file"
+runs:
+  using: "docker"
+  image: "Dockerfile"
+branding:
+  icon: "git-branch"
+  color: "red"
+inputs:
+  email:
+    description: "Email to use with git commits"
+    required: true
+    default: ${{ github.actor }}@localhost
+  name:
+    description: "Name to use with git commits"
+    required: true
+    default: ${{ github.actor }}
